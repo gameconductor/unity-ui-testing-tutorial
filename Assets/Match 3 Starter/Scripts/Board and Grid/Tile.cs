@@ -9,9 +9,9 @@ public class Tile : MonoBehaviour
     public Vector2Int gridPos;
     public bool isSelected = false;
     public string type = "Yellow";
-	public List<Sprite> explosion = new List<Sprite>();
+    public List<Sprite> explosion = new List<Sprite>();
 
-    private float FRAME_RATE = (1/60f) * 3f;
+    private float FRAME_RATE = (1 / 60f) * 3f;
 
     void Start()
     {
@@ -52,7 +52,9 @@ public class Tile : MonoBehaviour
         if (GetComponent<Image>().sprite)
         {
             name = GetComponent<Image>().sprite.name;
-        } else {
+        }
+        else
+        {
             name = null;
         }
         // Debug.Log("Select " + gridPos + " " + name);
