@@ -25,8 +25,8 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 
-public class BoardManager2 : MonoBehaviour {
-	public static BoardManager2 instance;
+public class BoardManager : MonoBehaviour {
+	public static BoardManager instance;
 	// public List<Sprite> characters = new List<Sprite>();
 	public List<Sprite> candies = new List<Sprite>();
 	public GameObject tilePrefab;
@@ -44,7 +44,7 @@ public class BoardManager2 : MonoBehaviour {
 	public bool IsPlayingAnim { get; set; }
 
 	void Start () {
-		instance = GetComponent<BoardManager2>();
+		instance = GetComponent<BoardManager>();
 		Sprite[,] randomGrid = GetRandomGrid(xSize, ySize);
         InitializeBoard(randomGrid);
     }

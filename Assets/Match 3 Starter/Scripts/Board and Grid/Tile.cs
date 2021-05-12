@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Tile : MonoBehaviour
 {
-    public BoardManager2 boardManager;
+    public BoardManager boardManager;
     public Vector2Int gridPos;
     public bool isSelected = false;
     public string type = "Yellow";

@@ -43,7 +43,7 @@ public class GUIManager : MonoBehaviour {
 
 	// Show the game over panel
 	public void GameOver() {
-		BoardManager2.instance.gameObject.SetActive(false);
+		BoardManager.instance.gameObject.SetActive(false);
 		GameManager.instance.gameOver = true;
 
 		gameOverPanel.SetActive(true);
@@ -85,7 +85,7 @@ public class GUIManager : MonoBehaviour {
 	}
 
 	private IEnumerator WaitForShifting() {
-		yield return new WaitUntil(() => !BoardManager2.instance.IsPlayingAnim);
+		yield return new WaitUntil(() => !BoardManager.instance.IsPlayingAnim);
 		yield return new WaitForSeconds(.25f);
 		GameOver();
 	}
